@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "blotato": {
+      "type": "http",
+      "url": "https://mcp.blotato.com/mcp"
+    },
+    "slack": {
+      "type": "http",
+      "url": "https://mcp.slack.com/mcp"
+    }
+  }
+}

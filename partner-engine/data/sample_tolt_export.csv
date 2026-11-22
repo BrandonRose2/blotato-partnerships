@@ -1,0 +1,13 @@
+partner_id,partner_name,partner_type,joined,month,paid_referrals,revenue_usd
+p001,Maya builds with AI,creator,2026-06-02,2026-11,27,1310
+p002,Northside Growth Agency,agency,2026-07-14,2026-11,12,1164
+p003,The n8n Guy,creator,2026-08-01,2026-11,9,436
+p004,Faceless Shorts Lab,creator,2026-09-10,2026-11,4,194
+p005,Solo Coach Systems,creator,2026-10-03,2026-11,1,48
+p006,Pixel & Post Studio,agency,2026-10-20,2026-11,0,0
+p007,Creator Ops Weekly,creator,2026-10-28,2026-11,0,0
+p008,Automate Your Clinic,agency,2026-11-12,2026-11,0,0
+p001,Maya builds with AI,creator,2026-06-02,2026-10,22,1067
+p002,Northside Growth Agency,agency,2026-07-14,2026-10,8,776
+p003,The n8n Guy,creator,2026-08-01,2026-10,10,485
+p004,Faceless Shorts Lab,creator,2026-09-10,2026-10,2,97

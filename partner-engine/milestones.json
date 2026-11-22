@@ -1,0 +1,11 @@
+{
+  "_note": "Monthly paid-referral milestones. Edit names, thresholds and rewards here; scorecard.py reads this file.",
+  "target_per_month": 10,
+  "tiers": [
+    { "name": "Activated", "min": 1,  "reward": "Welcome kit + shout-out in #wins" },
+    { "name": "Rising",    "min": 3,  "reward": "1:1 content review call + co-branded template pack" },
+    { "name": "Core",      "min": 10, "reward": "Monthly bonus + partner spotlight feature" },
+    { "name": "Elite",     "min": 25, "reward": "Sponsored collab + early feature access" }
+  ],
+  "at_risk": { "days_since_join": 21, "max_referrals": 0 }
+}

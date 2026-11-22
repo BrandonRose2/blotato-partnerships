@@ -1,0 +1,33 @@
+{
+  "text": "Partner scorecard 2026-11",
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": "Partner scorecard - 2026-11"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*53* paid referrals - *$3,152* - *2* partners at 10/mo\nTop 3: Maya builds with AI (27), Northside Growth Agency (12), The n8n Guy (9)"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": ":trophy: *Maya builds with AI* hit *Elite*\n:trophy: *Northside Growth Agency* hit *Core*\n:trophy: *Faceless Shorts Lab* hit *Rising*\n:trophy: *Solo Coach Systems* hit *Activated*"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Needs a nudge:*\n- Creator Ops Weekly\n- Pixel & Post Studio"
+      }
+    }
+  ]
+}

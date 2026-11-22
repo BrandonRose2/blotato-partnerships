@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brandon Rose × Blotato Partners</title>
+<meta name="description" content="Brandon Rose's AI automation portfolio, tailored to Blotato's Partnerships AI Engineer role.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono&display=swap">
+<style>
+:root{--bg:#121214;--surface:#19191c;--line:#2c2c31;--fg:#ebe6dc;--muted:#9a958d;--faint:#5f5c58;--gold:#c9a96a;--gold-soft:rgba(201,169,106,.14);--ok:#8fae8b;
+  --display:"Cormorant Garamond",Georgia,serif;--body:"Hanken Grotesk",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace;color-scheme:dark}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#eceae6;--surface:#f8f7f4;--line:#d9d6d0;--fg:#1d1c1a;--muted:#5f5b55;--faint:#a29e97;--gold:#8f6f32;--gold-soft:rgba(143,111,50,.12);--ok:#4f7a4b;color-scheme:light}}
+:root[data-theme="light"]{--bg:#eceae6;--surface:#f8f7f4;--line:#d9d6d0;--fg:#1d1c1a;--muted:#5f5b55;--faint:#a29e97;--gold:#8f6f32;--gold-soft:rgba(143,111,50,.12);--ok:#4f7a4b;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:40px 16px 72px}
+.eyebrow{font:600 11px var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+h1{font:500 clamp(38px,6vw,62px)/1.02 var(--display);margin:8px 0 12px;text-wrap:balance}
+h1 em{color:var(--gold);font-style:normal}
+.lede{max-width:680px;color:var(--muted);font-size:17px;margin:0}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:9px 18px;text-decoration:none;font-weight:600;font-size:14px}
+.btn.pri{background:var(--gold);border-color:var(--gold);color:var(--bg)}
+.btn:hover{border-color:var(--gold)}
+.checks{margin-top:34px;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px 18px;padding:18px 20px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.checks h2{grid-column:1/-1;margin:0 0 4px;font:500 22px var(--display)}
+.checks div{display:flex;gap:9px;align-items:baseline;font-size:14px}
+.checks b{color:var(--ok);font-weight:600}
+.checks span{color:var(--muted)}
+section{margin-top:48px}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:14px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:16px}
+.sec-head h2{margin:0;font:500 32px/1.1 var(--display)}
+.filters{display:flex;gap:6px;flex-wrap:wrap}
+.chip{background:none;border:1px solid var(--line);border-radius:999px;padding:5px 13px;color:var(--muted);font:500 13px var(--body);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:var(--bg)}
+.track-wrap{position:relative}
+.track{display:grid;grid-auto-flow:column;grid-auto-columns:min(380px,86%);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 18px;scrollbar-width:thin}
+.card{scroll-snap-align:start;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.card[hidden]{display:none}
+.shot{aspect-ratio:960/512;background:linear-gradient(150deg,var(--gold-soft),transparent 70%);display:grid;place-items:center;border-bottom:1px solid var(--line);overflow:hidden}
+.shot img{width:100%;height:100%;object-fit:cover;display:block}
+.shot .mono{font:500 34px var(--display);color:var(--gold);text-align:center;padding:16px;line-height:1.1}
+.body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font:400 10.5px var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--gold);border:1px solid color-mix(in srgb,var(--gold) 40%,transparent);border-radius:4px;padding:2px 6px}
+.card h3{margin:0;font:500 25px/1.15 var(--display)}
+.card p{margin:0;font-size:14px;color:var(--muted)}
+.map{border-left:2px solid var(--gold);padding:6px 0 6px 12px;font-size:14px;color:var(--fg)}
+.map b{display:block;font:600 10.5px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:2px}
+.card .go{margin-top:auto;font-size:13px;font-weight:600;color:var(--gold);text-decoration:none}
+.card .go.none{color:var(--faint);font-weight:400}
+.nav{display:flex;gap:8px;justify-content:flex-end;margin-top:4px;align-items:center}
+.nav button{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--fg);font-size:18px;cursor:pointer}
+.nav button:hover{border-color:var(--gold)}
+.count{font:12px var(--mono);color:var(--muted);margin-right:auto}
+.answers{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.ans{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--surface);text-decoration:none}
+.ans:hover{border-color:var(--gold)}
+.ans .q{font:600 11px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.ans .a{font:500 21px/1.2 var(--display);margin-top:6px}
+footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.theme{background:none;border:1px solid var(--line);border-radius:999px;color:var(--muted);padding:4px 12px;cursor:pointer;font:12px var(--body)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Application · Partnerships AI Engineer · Blotato</div>
+  <h1>I build the systems that <em>scale people.</em></h1>
+  <p class="lede">I'm Brandon Rose. Since February 2026 I've shipped more than 20 AI-built tools: dashboards, scheduled reports, onboarding and certification portals, scrapers and data collectors. Below, they're sorted by the part of your Partners program each one would help with.</p>
+  <div class="cta">
+    <a class="btn pri" href="https://github.com/BrandonRose2/blotato-partnerships">View the GitHub repo →</a>
+    <a class="btn" href="https://github.com/BrandonRose2/blotato-partnerships/blob/main/docs/answers.md">Read my 4 answers</a>
+    <a class="btn" href="mailto:ai@brandon-rose.com">ai@brandon-rose.com</a>
+  </div>
+
+  <div class="checks" aria-label="Requirements">
+    <h2>Your checklist</h2>
+    <div><b>✓</b><span><strong>Claude Code</strong>, a daily user</span></div>
+    <div><b>✓</b><span><strong>GitHub</strong>, this application is a repo</span></div>
+    <div><b>✓</b><span><strong>Skills</strong>, 3 Claude Code skills in the repo</span></div>
+    <div><b>✓</b><span><strong>Scheduled tasks</strong>, GitHub Actions cron + daily exec reports</span></div>
+    <div><b>✓</b><span><strong>MCP</strong>, Blotato + Slack MCP config</span></div>
+    <div><b>✓</b><span><strong>Scraping</strong>, partner sourcing + jobs finder</span></div>
+    <div><b>✓</b><span><strong>Automations</strong>, 20+ shipped and used</span></div>
+    <div><b>✓</b><span><strong>People + community</strong>, trained managers, coached creators</span></div>
+  </div>
+
+  <section>
+    <div class="sec-head">
+      <h2>What I've built, mapped to your Partners program</h2>
+      <div class="filters" role="group" aria-label="Filter by Partners duty" id="filters">
+        <button class="chip" data-f="all" aria-pressed="true">All</button>
+        <button class="chip" data-f="source" aria-pressed="false">Sourcing</button>
+        <button class="chip" data-f="onboard" aria-pressed="false">Onboarding</button>
+        <button class="chip" data-f="numbers" aria-pressed="false">Milestones &amp; numbers</button>
+        <button class="chip" data-f="content" aria-pressed="false">Partner content</button>
+        <button class="chip" data-f="community" aria-pressed="false">Community</button>
+      </div>
+    </div>
+    <div class="track-wrap">
+      <div class="track" id="track" tabindex="0" aria-label="Projects carousel"></div>
+      <div class="nav"><span class="count" id="count"></span><button id="prev" aria-label="Previous">←</button><button id="next" aria-label="Next">→</button></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>My answers, in short</h2></div>
+    <div class="answers">
+      <a class="ans" href="https://github.com/BrandonRose2/blotato-partnerships/blob/main/docs/answers.md#1-how-would-you-recruit-my-next-1000-partners"><div class="q">Next 1,000 partners</div><div class="a">Turn happy customers into partners, invited at their "aha" moment.</div></a>
+      <a class="ans" href="https://github.com/BrandonRose2/blotato-partnerships/blob/main/docs/answers.md#2-how-would-you-recruit-my-next-10000-partners"><div class="q">Next 10,000 partners</div><div class="a">A template partner program: builders publish workflows that run on Blotato.</div></a>
+      <a class="ans" href="https://github.com/BrandonRose2/blotato-partnerships/blob/main/docs/answers.md#3-what-system-would-you-build-to-accomplish-that-in-3-months"><div class="q">The 3-month system</div><div class="a">The Partner Engine: source, onboard, activate, reward, measure.</div></a>
+      <a class="ans" href="https://github.com/BrandonRose2/blotato-partnerships/blob/main/docs/answers.md#4-your-most-impressive-accomplishment"><div class="q">Proudest accomplishment</div><div class="a">A daily executive report covering 3,917 units, built with no engineering team.</div></a>
+    </div>
+  </section>
+
+  <footer><span>Brandon Rose · Sherman Oaks, CA · ai@brandon-rose.com · (323) 533-0117 · <a href="https://www.linkedin.com/in/brandon-rose-ai/">LinkedIn</a> · <a href="https://3d-portfolio-production.up.railway.app/">Full portfolio</a></span><button class="theme" id="theme" type="button">Theme</button></footer>
+</div>
+
+<script>
+const P=[
+ {t:"Partner Engine",img:null,mono:"Partner<br>Engine",f:["source","onboard","numbers","community"],tags:["Python","GitHub Actions","MCP","Skills"],
+  d:"Built for this application. It scrapes and scores partner leads, runs a weekly scorecard with milestone tiers, flags at-risk partners, and includes Claude Code skills for onboarding and Slack triage.",
+  m:"This is a first draft of the system I'd build in my first 3 months.",u:"https://github.com/BrandonRose2/blotato-partnerships",l:"Open the repo"},
+ {t:"Vacancy Report + daily exec email",img:"vacancy-report.jpg",f:["numbers"],tags:["Live data","Scheduled task","HTML email"],
+  d:"Live vacancy and cash-flow dashboard across 43 properties and 3,917 units. A polished report went to the CEO and executives every day at 1 PM.",
+  m:"It's the same pattern as a partner leaderboard: live referral data, milestone highlights, and a report leadership actually reads.",u:"https://vacancyapp-42vudntx.manus.space/",l:"Open the app"},
+ {t:"Remote AI Jobs finder",img:null,mono:"Scraper<br>on a schedule",f:["source"],tags:["Scraping","Cron","Local LLM","Railway"],
+  d:"My own pipeline. A finder script scrapes and filters remote AI automation roles every 4 days, uses a local LLM through FreeLLMAPI, and publishes the results to a page I host on Railway.",
+  m:"Swap job listings for creators and agencies, and this is partner sourcing.",u:null},
+ {t:"New Hire Onboarding Portal",img:"new-hire-onboarding-portal.jpg",f:["onboard"],tags:["Portal","Admin view","Docs pipeline"],
+  d:"New hires complete W-4s, I-9s, compliance forms and handbooks in one place. Each file goes to the right folder automatically, and an admin view tracks completion.",
+  m:"Onboard every partner the same way: a step-by-step checklist, with someone always able to see who's stuck.",u:"https://new-hire-onboarding.manus.space/admin",l:"Open the portal"},
+ {t:"PropertyMax.ai Training Hub",img:"propertymax-ai-training-hub.jpg",f:["onboard","community"],tags:["Video","Quiz","Certificate"],
+  d:"Phone Excellence training: an instructional video, an interactive quiz, a downloadable playbook and automatic completion certificates for property managers.",
+  m:"A Blotato partner certification, so partners can say \"I'm certified\" and actually know the product.",u:"https://manus.im/share/file/66d72fbd-2504-46be-bee2-1ad3ff5f4fac",l:"Open the hub"},
+ {t:"Regional Data Collector",img:"regional-data-collector.jpg",f:["numbers","community"],tags:["Forms","Many contributors"],
+  d:"Collected recurring inputs from regional managers and fed them into portfolio-wide reporting.",
+  m:"Partner check-ins at scale: a short weekly form in place of 1,000 DMs.",u:null},
+ {t:"Report Schedule Builder",img:"report-schedule-builder.jpg",f:["numbers"],tags:["Scheduling","Recurring reports"],
+  d:"Built and managed recurring report schedules for regional teams, with a configurable cadence for each report.",
+  m:"This is how milestone reports and reward payouts would run on time without anyone remembering to send them.",u:"https://marcreport-ypkstjhu.manus.space/",l:"Open the app"},
+ {t:"Flyer Studio (Claude)",img:"flyer-claude.jpg",f:["content"],tags:["Claude","GitHub Pages","Generator"],
+  d:"A form-to-flyer generator for referral marketing. I built it twice, once with Manus and once with Claude, to compare the results.",
+  m:"Co-branded partner content kits: a partner fills in a form and gets ready-to-post assets with their link.",u:"https://brandonrose2.github.io/propertymax-flyer-studio-claude/",l:"Open the studio"},
+ {t:"Rental Comps",img:"rental-comps-claude.jpg",f:["source"],tags:["Claude","API lookups"],
+  d:"Looks up comparable rental listings for underwriting: structured data pulled from outside sources into one view.",
+  m:"The same lookup-and-enrich step I'd use to qualify partner leads.",u:"https://brandonrose2.github.io/claude-rent-comps/",l:"Open the tool"},
+ {t:"Investor Summary Portal",img:"investor-summary.jpg",f:["numbers"],tags:["Search","Filters","Detail views"],
+  d:"Search and filter hundreds of investors and properties, toggle between views, and flag missing documents.",
+  m:"A partner CRM view: search any partner, filter by tier or at-risk, and click through for history.",u:"https://investor-summary.manus.space/",l:"Open the portal"},
+ {t:"Creator growth playbooks",img:null,mono:"Creator<br>coaching",f:["community","content"],tags:["Creators","Monetization","1:1"],
+  d:"Personal growth and monetization playbooks I built for two friends starting creator accounts: content plans, posting systems and ways to earn.",
+  m:"This is the partner-support part of the job. I already enjoy helping creators win.",u:null},
+ {t:"AI Learning Portal + AI tools directory",img:"ai-learning-portal.jpg",f:["community"],tags:["Teaching","763 tools","Shared"],
+  d:"An AI learning portal, plus a searchable directory of 763 AI tools in 26 categories that I share with friends from my Life Planner.",
+  m:"Teaching people AI in simple terms, which is the same energy as your partner community.",u:"https://ailearnhub-ebwcvges.manus.space/",l:"Open the portal"}
+];
+const track=document.getElementById("track"),count=document.getElementById("count");
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+track.innerHTML=P.map((p,i)=>`<article class="card" data-f="${p.f.join(" ")}">
+  <div class="shot">${p.img?`<img src="assets/shots/${p.img}" alt="Screenshot of ${esc(p.t)}" loading="lazy" width="960" height="512">`:`<div class="mono">${p.mono}</div>`}</div>
+  <div class="body"><div class="tags">${p.tags.map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
+  <h3>${esc(p.t)}</h3><p>${esc(p.d)}</p>
+  <div class="map"><b>For Blotato Partners</b>${esc(p.m)}</div>
+  ${p.u?`<a class="go" href="${p.u}" target="_blank" rel="noopener">${esc(p.l)} ↗</a>`:`<span class="go none">Internal or private, demo on request</span>`}</div></article>`).join("");
+function upd(){const v=[...track.children].filter(c=>!c.hidden).length;count.textContent=`${v} project${v===1?"":"s"}`}
+document.getElementById("filters").addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;
+  document.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed",c===b));
+  const f=b.dataset.f;[...track.children].forEach(c=>c.hidden=f!=="all"&&!c.dataset.f.split(" ").includes(f));track.scrollTo({left:0});upd()});
+const step=()=>(track.querySelector(".card:not([hidden])")?.offsetWidth||360)+16;
+document.getElementById("prev").onclick=()=>track.scrollBy({left:-step(),behavior:"smooth"});
+document.getElementById("next").onclick=()=>track.scrollBy({left:step(),behavior:"smooth"});
+document.getElementById("theme").onclick=()=>{const r=document.documentElement,dark=matchMedia("(prefers-color-scheme: dark)").matches;
+  const cur=r.dataset.theme||(dark?"dark":"light");r.dataset.theme=cur==="dark"?"light":"dark"};
+upd();
+</script>
+</body>
+</html>

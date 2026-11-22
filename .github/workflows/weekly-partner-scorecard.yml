@@ -1,0 +1,37 @@
+name: Weekly partner scorecard
+
+# Every Monday 8:07am Pacific (15:07 UTC): score partners, post wins + at-risk list to Slack,
+# and commit the report so there's a running history in the repo.
+on:
+  schedule:
+    - cron: "7 15 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  scorecard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      # In production this step pulls the live export from Tolt (blotato.tolt.io).
+      # The sample CSV keeps the demo runnable for anyone who forks the repo.
+      - name: Build scorecard
+        working-directory: partner-engine
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: python scorecard.py --export data/sample_tolt_export.csv --month 2026-11 --today 2026-11-22
+      - name: Source new partner leads
+        working-directory: partner-engine
+        run: python source_partners.py --csv data/sample_candidates.csv
+      - name: Commit reports
+        run: |
+          git config user.name "partner-engine-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add partner-engine/out
+          git diff --cached --quiet || git commit -m "Weekly partner scorecard"
+          git push
