@@ -50,6 +50,6 @@ The one number I'd watch: **the share of partners at 10+ paid referrals a month*
 
 I was hired as an executive assistant at a property management company with no engineering team. Between February and November 2026 I taught myself to build with AI and shipped **more than 20 working tools** that the company actually used.
 
-The one I'm proudest of is the **live vacancy dashboard and daily executive report**. It started with four regions and grew to **43 properties, 5 regions and 3,917 units**. Every day at 1 PM it emailed a polished HTML report to the CEO and top executives in New York: per-unit vacancy, leased/preleased status, day-over-day changes and cash flow.
+The one I'm proudest of is the **live vacancy dashboard and daily executive report**. It started with four regions and grew to **41 properties, 5 regions and 3,917 units**. Every day at 1 PM it emailed a polished HTML report to the CEO and top executives in New York: per-unit vacancy, leased/preleased status, day-over-day changes and cash flow.
 
 The early versions broke. Live sync failed and the email formatting fell apart. I kept rebuilding until it ran every day without anyone touching it. That's the part I'm proudest of. Struggling, feeling dumb and failing until it works is the job you're describing, and it's how I've been working all year.
