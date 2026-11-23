@@ -4,6 +4,7 @@
 
 **Live portfolio (tailored to this role):** https://brandonrose2.github.io/blotato-partnerships/
 **My answers to the 4 questions:** [docs/answers.md](docs/answers.md)
+**Resume:** [Brandon-Rose-Resume.pdf](Brandon-Rose-Resume.pdf)
 **Contact:** ai@brandon-rose.com · (323) 533-0117 · [LinkedIn](https://www.linkedin.com/in/brandon-rose-ai/)
 
 ---
@@ -13,6 +14,7 @@
 ```
 .
 ├── index.html                      # Portfolio carousel, ranked by relevance to the Partners program (GitHub Pages)
+├── Brandon-Rose-Resume.pdf          # Resume
 ├── docs/answers.md                 # 1,000 partners / 10,000 partners / 3-month system / proudest accomplishment
 ├── partner-engine/
 │   ├── source_partners.py          # Scrape and score creators/agencies (YouTube Data API or any scraped CSV)
